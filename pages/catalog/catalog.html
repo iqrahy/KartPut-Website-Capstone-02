@@ -1,0 +1,1516 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KartPul</title>
+    <link rel="stylesheet" href="/style/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+
+
+</head>
+
+<body>
+
+    <div class="position-sticky top-0 z-3">
+    <!-- navbar 1 -->
+
+    <nav class="py-2 bg-white d-none d-md-block">
+        <div class="container d-flex flex-wrap">
+            <span class="nav me-auto mt-2 text-light-emphasis font-size cursor">
+                New Offers This Weekend only to Get 50% Flate
+            </span>
+            <ul class="nav">
+                <li class="nav-item font-size">
+                    <a href="#" class="nav-link link-body-emphasis pe-2 text-light-emphasis">Today's Deal <span
+                            class="ms-2 text-body-tertiary">\</span></a>
+                </li>
+                <li class="nav-item font-size">
+                    <a href="#" class="nav-link link-body-emphasis px-2 text-light-emphasis">Customer Service <span
+                            class="ms-2 text-body-tertiary">\</span></a>
+                </li>
+                <li class="nav-item font-size">
+                    <a href="#" class="nav-link link-body-emphasis px-2 text-light-emphasis">Track Order</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- nav 2 -->
+
+    <nav class="bg-warning d-none d-lg-block">
+        <div class="container-fluid">
+
+            <div class="d-flex align-items-center row">
+
+                <div class="col-md-3">
+                    <img class="img-fluid img-width bg-white py-3 px-5 ms-md-5" src="/images/logo-img.avif" alt="">
+                </div>
+
+
+                <div class="col-md-5 mt-3">
+                    <form class="row ">
+                        <div class="col-auto w-75 ms-4">
+                            <input type="text" class="form-control rounded-1" id="inputPassword2" placeholder="Search">
+                          </div>
+
+                          <div class="col-auto">
+                            <button type="submit" class="btn btn-dark mb-3">Submit</button>
+                          </div>
+                    </form>
+                </div>
+
+
+                <div class="d-flex align-items-center col-md-4">
+
+
+                    <div class="dropdown">
+                        <button class="btn border-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <iconify-icon class="text-black fs-2 ps-4 pe-2 ms-5 cursor"
+                                icon="arcticons:contacts-alt"></iconify-icon>
+                        </button>
+                        <ul class="dropdown-menu w-25">
+                            <li><a class="dropdown-item" href="/pages/login-signup/login.html">Sign in</a></li>
+                            <li><a class="dropdown-item" href="/pages/login-signup/signup.html">Sign up</a></li>
+                        </ul>
+                    </div>
+
+
+                    <div>
+                        <iconify-icon class="text-black fs-2 pe-2 cursor"
+                            icon="system-uicons:refresh-alt"></iconify-icon>
+                    </div>
+
+                    <div class="d-none d-md-block">
+                        <iconify-icon class="text-black fs-2 ps-2 cursor" icon="ph:heart-light"></iconify-icon>
+                        <span class="bg-black text-white rounded-circle badge">0</span>
+                    </div>
+
+
+                    <div>
+                        <a href="/pages/cart/cart.html"> <iconify-icon class="text-black fs-2 ps-2 cursor"
+                                icon="mdi-light:cart"></iconify-icon>
+                            <span class="bg-black text-white rounded-circle badge ">1</span></a>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+
+    </nav>
+
+    <!--nav 2 xs screen -->
+
+    <nav class="d-flex justify-content-between align-items-center bg-warning d-block d-lg-none py-4 px-2">
+        <div>
+            <img class="img-fluid xs-img ms-sm-5" src="/images/logo-img.avif" alt="">
+
+        </div>
+
+        <div class="d-flex col-md-4">
+
+            <div>
+                <iconify-icon class="text-black fs-2 ps-4 pe-2 ms-5 cursor"
+                    icon="arcticons:contacts-alt"></iconify-icon>
+            </div>
+
+            <div>
+                <iconify-icon class="text-black fs-2 px-1 cursor" icon="material-symbols:search"></iconify-icon>
+            </div>
+
+            <div class="d-none d-md-block">
+                <iconify-icon class="text-black fs-2 ps-2 cursor" icon="ph:heart-light"></iconify-icon>
+                <span class="bg-black text-white rounded-circle badge">0</span>
+            </div>
+
+            <div>
+                <a href="/pages/cart/cart.html"> <iconify-icon class="text-black fs-2 ps-1 cursor"
+                        icon="mdi-light:cart"></iconify-icon>
+                    <span class="bg-black text-white rounded-circle badge ">1</span></a>
+
+            </div>
+
+
+            <iconify-icon class="text-black fs-2 ps-4 d-block d-sm-none cursor" icon="material-symbols:menu"
+                data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+                aria-controls="offcanvasRight"></iconify-icon>
+
+            <!-- offcanvas -->
+            <div class="offcanvas offcanvas-end w-75" tabindex="-1" id="offcanvasRight"
+                aria-labelledby="offcanvasRightLabel">
+                <div class="offcanvas-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="list-unstyled d-flex flex-column h-50 justify-content-around text-black fs-6">
+                        <li>
+                            <a class="text-decoration-none text-secondary" href="/index.html">Home</a>
+                            <hr>
+
+                        </li>
+
+                        <li>
+                            <a class="text-decoration-none text-secondary" href="#">Catalog</a>
+                            <hr>
+
+                        </li>
+
+                        <li>
+                            <a class="text-decoration-none text-secondary"
+                                href="/pages/special/special.html">Specials</a>
+                            <hr>
+
+                        </li>
+
+                        <li>
+                            <a class="text-decoration-none text-secondary"
+                                href="/pages/contact/contact.html">Contact</a>
+                            <hr>
+
+                        </li>
+
+                        <li>
+                            <a class="text-decoration-none text-secondary" href="/pages/blog/blog.html">Blogs</a>
+                            <hr>
+
+                        </li>
+
+                        <li>
+                            <a class="text-decoration-none text-secondary" href="/pages/login-signup/login.html">Sign
+                                in</a>
+                            <hr>
+
+                        </li>
+
+                        <li>
+                            <a class="text-decoration-none text-secondary" href="/pages/login-signup/signup.html">Sign
+                                up</a>
+
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+    </nav>
+
+
+    <!-- nav 3 -->
+
+  
+    <div class="container-fluid d-none d-md-block bg-white">
+        <nav class="pt-2 border-bottom d-flex justify-content-between align-items-center row">
+
+            <div class="d-flex align-items-center col-9">
+
+
+                <div class="mt-2 ms-lg-4">
+
+                    <div class="dropdown">
+
+                        <button class="btn d-flex ms-lg-3 pb-3 px-4 border-0 categories-btn" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <iconify-icon class="text-black fs-5 pe-2 text-secondary cursor"
+                                icon="material-symbols:menu"></iconify-icon>
+                            Shop By Categories
+                        </button>
+
+                        <ul class="dropdown-menu w-100">
+                            <li><a class="dropdown-item py-0 my-0" href="#">Computers</a></li>
+                            <hr>
+                            <li><a class="dropdown-item py-0 my-0" href="#">Television</a></li>
+                            <hr>
+                            <li><a class="dropdown-item py-0 my-0" href="#">Components</a></li>
+                            <hr>
+                            <li><a class="dropdown-item py-0 my-0" href="#">Washing Machine</a></li>
+                            <hr>
+                            <li><a class="dropdown-item py-0 my-0" href="#">Speakers</a></li>
+                            <hr>
+                            <li><a class="dropdown-item py-0 my-0" href="#">Smart Watches</a></li>
+                            <hr>
+                            <li><a class="dropdown-item py-0 my-0" href="#">Cameras</a></li>
+                            <hr>
+                            <li><a class="dropdown-item py-0 my-0" href="#">Mobile Phone</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+
+
+                <div class="pt-2 ms-lg-5">
+                    <ul class="list-unstyled d-flex fs-6">
+                        <li>
+                            <a class="text-decoration-none text-secondary px-3 border-2 border-end" href="/index.html">Home</a>
+                        </li>
+
+                        <li>
+                            <a class="text-decoration-none text-secondary px-3 border-2 border-end"
+                                href="#">Catalog</a>
+                        </li>
+
+                        <li>
+                            <a class="text-decoration-none text-secondary px-3 border-2 border-end"
+                                href="/pages/special/special.html">Specials</a>
+                        </li>
+
+                        <li>
+                            <a class="text-decoration-none text-secondary px-3 border-2 border-end"
+                                href="/pages/contact/contact.html">Contact</a>
+                        </li>
+
+                        <li>
+                            <a class="text-decoration-none text-secondary px-3" href="/pages/blog/blog.html">Blogs</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <div class="d-flex align-items-center col-lg-2 col-2">
+                <iconify-icon class="fs-3 cursor" icon="noto-v1:waving-hand"></iconify-icon>
+                <span class="font-size fw-medium ps-2 cursor">New User Zone</span>
+
+            </div>
+        </nav>
+    </div>
+
+
+    <!-- nav 3 xs screen -->
+    <nav class="py-3 px-3 border-bottom d-block d-md-none bg-white">
+
+        <div class="d-flex align-items-center">
+            <div class="dropdown">
+                <button class="btn ps-3 pe-5 d-flex border-0" type="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    <iconify-icon class="text-black fs-5 pe-2 text-secondary cursor"
+                        icon="material-symbols:menu"></iconify-icon>
+                    Shop By Categories
+                </button>
+                <ul class="dropdown-menu w-100">
+                    <li><a class="dropdown-item py-0 my-0" href="#">Computers</a></li>
+                    <hr>
+                    <li><a class="dropdown-item py-0 my-0" href="#">Television</a></li>
+                    <hr>
+                    <li><a class="dropdown-item py-0 my-0" href="#">Components</a></li>
+                    <hr>
+                    <li><a class="dropdown-item py-0 my-0" href="#">Washing Machine</a></li>
+                    <hr>
+                    <li><a class="dropdown-item py-0 my-0" href="#">Speakers</a></li>
+                    <hr>
+                    <li><a class="dropdown-item py-0 my-0" href="#">Smart Watches</a></li>
+                    <hr>
+                    <li><a class="dropdown-item py-0 my-0" href="#">Cameras</a></li>
+                    <hr>
+                    <li><a class="dropdown-item py-0 my-0" href="#">Mobile Phone</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </nav>
+
+    </div>
+
+
+
+    <div class="mx-md-5 mt-5">
+        <div class="d-flex">
+
+            <!-- left -->
+            <div class="d-none d-md-block w-25 me-3">
+
+
+                <!-- heading -->
+                <div>
+                    <h5 class="fw-medium pb-2 text-muted">Product Categories</h5>
+
+                    <div class="progress mb-4" style="height: 2px;">
+                        <div class="progress-bar bg-warning" role="progressbar" aria-label="Warning example"
+                            style="width: 20%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                </div>
+
+
+                <!-- accordion -->
+                <div>
+
+                    <div class="accordion accordion-flush" id="accordionFlushExample">
+
+
+                        <div class="accordion-item border-0">
+                            <h2 class="accordion-header" id="flush-headingOne">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                    aria-controls="flush-collapseOne">
+                                    Computers
+                                </button>
+                            </h2>
+                            <div id="flush-collapseOne" class="accordion-collapse collapse"
+                                aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <ul class="list-unstyled">
+                                        <li class="py-2">Workstation</li>
+                                        <li class="py-2">Laptop</li>
+                                        <li class="py-2">Desktop</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="accordion-item border-0">
+                            <h2 class="accordion-header" id="flush-headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                                    aria-controls="flush-collapseTwo">
+                                    Television
+                                </button>
+                            </h2>
+                            <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                                aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <ul class="list-unstyled">
+                                        <li class="py-2">LCD Screen</li>
+                                        <li class="py-2">Plasma Screen</li>
+                                        <li class="py-2">Super Amoled</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="accordion-item border-0">
+                            <h2 class="accordion-header" id="flush-headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseThree" aria-expanded="false"
+                                    aria-controls="flush-collapseThree">
+                                    Components
+                                </button>
+                            </h2>
+                            <div id="flush-collapseThree" class="accordion-collapse collapse"
+                                aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <ul class="list-unstyled">
+                                        <li class="py-2">Mice And Trackballs</li>
+                                        <li class="py-2">Monitors</li>
+                                        <li class="py-2">Printers</li>
+                                        <li class="py-2">Scanners</li>
+                                        <li class="py-2">Web Cameras</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <ul class="list-unstyled ms-3">
+                        <li class="py-2">Washing Machine</li>
+                        <li class="py-2">Speakers</li>
+                        <li class="py-2 ">Smart Watches</li>
+                        <li class="py-2">Cameras</li>
+                        <li class="py-2">Mobile Phone</li>
+                        <li class="py-2">Sneakers</li>
+                    </ul>
+
+                </div>
+
+
+                <!-- filters -->
+
+                <div>
+                    <h5 class="fw-medium pb-1 mt-4 text-muted">Filter</h5>
+
+                    <div class="progress mb-4" style="height: 2px;">
+                        <div class="progress-bar bg-warning" role="progressbar" aria-label="Warning example"
+                            style="width: 20%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                </div>
+
+                <div class="d-flex flex-wrap">
+                    <span class="bg-light py-2 px-2 m-1">Accessories</span>
+                    <span class="bg-light py-2 px-2 m-1">Back Light</span>
+                    <span class="bg-light py-2 px-2 m-1">Calendar</span>
+                    <span class="bg-light py-2 px-2 m-1">Caps</span>
+                    <span class="bg-light py-2 px-2 m-1">Clothes</span>
+                    <span class="bg-light py-2 px-2 m-1">Clothing</span>
+                    <span class="bg-light py-2 px-2 m-1">Cotton</span>
+                    <span class="bg-light py-2 px-2 m-1">Dual Time</span>
+                    <span class="bg-light py-2 px-2 m-1">Fashion</span>
+                    <span class="bg-light py-2 px-2 m-1">Hronograph</span>
+                    <span class="bg-light py-2 px-2 m-1">Multi Function</span>
+                    <span class="bg-light py-2 px-2 m-1">Shoes</span>
+                    <span class="bg-light py-2 px-2 m-1">Summer</span>
+                    <span class="bg-light py-2 px-2 m-1">Trends</span>
+                    <span class="bg-light py-2 px-2 m-1">Vintage</span>
+                </div>
+
+                <div class=" ps-2 mt-3">
+                    <img class="img-fluid" src="/images/left-banner_large.webp" alt="">
+                </div>
+
+            </div>
+
+
+
+            <!-- right -->
+
+            <div class="w-75 ms-5">
+
+                <!-- product -->
+
+
+                <div class="row d-flex justify-content-between border-bottom">
+                    <span class="col-6 col-md-3 fs-5 fw-medium">Products</span>
+                    <div class="col-6 col-md-4 me-md-4 col-lg-2">
+                        <ul class="d-flex align-items-center list-unstyled">
+                            <li class="font-size px-3"><a class="text-decoration-none text-secondary"
+                                    href="/index.html">Home</a></li>
+                            <span>|</span>
+                            <li class="font-size px-3"><a class="text-decoration-none text-secondary"
+                                    href="#">Products</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- filter and sort -->
+
+                <div class="d-flex justify-content-between mt-4">
+
+                    <div class="d-flex catalog">
+                        <div class="filter">
+                            <span class="font-size me-2">Filter By</span>
+                            <div class="btn-group">
+                                <button class="btn btn-sm dropdown-toggle border" type="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    All Products
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li>All Products</li>
+                                    <li>All Products</li>
+                                    <li>All Products</li>
+                                    <li>All Products</li>
+                                    <li>All Products</li>
+                                    <li>All Products</li>
+                                    <li>All Products</li>
+                                    <li>All Products</li>
+                                    <li>All Products</li>
+                                </ul>
+                            </div>
+                        </div>
+
+
+                        <div class="ms-3 sort">
+                            <span class="font-size me-2">Sort By</span>
+                            <div class="btn-group">
+                                <button class="btn btn-sm dropdown-toggle border" type="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Featured
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li>All Products</li>
+                                    <li>All Products</li>
+                                    <li>All Products</li>
+                                    <li>All Products</li>
+                                    <li>All Products</li>
+                                    <li>All Products</li>
+                                    <li>All Products</li>
+                                    <li>All Products</li>
+                                    <li>All Products</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="d-none d-md-block">
+                        <span class="font-size text-secondary">18 Products</span>
+                    </div>
+
+                </div>
+
+
+
+                <!-- cards -->
+
+
+                <div class="d-flex justify-content-between gap-4 mt-4 card-1">
+                    <!-- card 1 -->
+                    <div class="" style="width: 19rem;">
+                        <img src="/images/card-4.jpg" class="card-img-top img-fluid" alt="...">
+                        <div class="card-body mt-3">
+                            <p>amazon echo</p>
+
+                            <span class="text-primary fw-semibold">$250.00<span
+                                    class="text-decoration-line-through text-black fw-normal ms-3">$12.00</span></span>
+
+                            <div>
+                                <button type="button" class="btn btn-outline-warning mt-3">Add To Cart</button>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <!-- card 2 -->
+                    <div class="" style="width: 19rem;">
+                        <img src="/images/card-2.webp" class="card-img-top img-fluid" alt="...">
+                        <div class="card-body mt-3">
+                            <p>samsung gear 360</p>
+
+                            <span class="text-primary fw-semibold">$9.00<span
+                                    class="text-decoration-line-through text-black fw-normal ms-3">$12.00</span></span>
+
+                            <div>
+                                <button type="button" class="btn btn-outline-warning mt-3">Add To Cart</button>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <!-- card 3 -->
+                    <div class="d-none d-md-block" style="width: 19rem;">
+                        <img src="/images/card-3.webp" class="card-img-top img-fluid" alt="...">
+                        <div class="card-body mt-3">
+                            <p>samsung gear 360</p>
+
+                            <span class="text-primary fw-semibold">$9.00<span
+                                    class="text-decoration-line-through text-black fw-normal ms-3">$12.00</span></span>
+
+                            <div>
+                                <button type="button" class="btn btn-outline-warning mt-3">Add To Cart</button>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- card 4 -->
+                    <div class="d-none d-md-block" style="width: 19rem;">
+                        <img src="/images/card-7.avif" class="card-img-top img-fluid" alt="...">
+                        <div class="card-body mt-3">
+                            <p>samsung gear 360</p>
+
+                            <span class="text-primary fw-semibold">$9.00<span
+                                    class="text-decoration-line-through text-black fw-normal ms-3">$12.00</span></span>
+
+                            <div>
+                                <button type="button" class="btn btn-outline-warning mt-3">Add To Cart</button>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+                <!-- cards 2-->
+
+
+                <div class="d-flex justify-content-between gap-4 mt-5 pt-3 card-1">
+                    <!-- card 1 -->
+                    <div class="" style="width: 19rem;">
+                        <img src="/images/card-8.avif" class="card-img-top img-fluid" alt="...">
+                        <div class="card-body mt-3">
+                            <p>amazon echo</p>
+
+                            <span class="text-primary fw-semibold">$250.00<span
+                                    class="text-decoration-line-through text-black fw-normal ms-3">$12.00</span></span>
+
+                            <div>
+                                <button type="button" class="btn btn-outline-warning mt-3">Add To Cart</button>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <!-- card 2 -->
+                    <div class="" style="width: 19rem;">
+                        <img src="/images/card-9.avif" class="card-img-top img-fluid" alt="...">
+                        <div class="card-body mt-3">
+                            <p>samsung gear 360</p>
+
+                            <span class="text-primary fw-semibold">$9.00<span
+                                    class="text-decoration-line-through text-black fw-normal ms-3">$12.00</span></span>
+
+                            <div>
+                                <button type="button" class="btn btn-outline-warning mt-3">Add To Cart</button>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <!-- card 3 -->
+                    <div class="d-none d-md-block" style="width: 19rem;">
+                        <img src="/images/card-10.jpg" class="card-img-top img-fluid" alt="...">
+                        <div class="card-body mt-3">
+                            <p>samsung gear 360</p>
+
+                            <span class="text-primary fw-semibold">$9.00<span
+                                    class="text-decoration-line-through text-black fw-normal ms-3">$12.00</span></span>
+
+                            <div>
+                                <button type="button" class="btn btn-outline-warning mt-3">Add To Cart</button>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- card 4 -->
+                    <div class="d-none d-md-block" style="width: 19rem;">
+                        <img src="/images/card-11.webp" class="card-img-top img-fluid" alt="...">
+                        <div class="card-body mt-3">
+                            <p>samsung gear 360</p>
+
+                            <span class="text-primary fw-semibold">$9.00<span
+                                    class="text-decoration-line-through text-black fw-normal ms-3">$12.00</span></span>
+
+                            <div>
+                                <button type="button" class="btn btn-outline-warning mt-3">Add To Cart</button>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <!-- cards 3-->
+
+
+                <div class="d-flex justify-content-between gap-4 mt-5 pt-3 card-1">
+                    <!-- card 1 -->
+                    <div class="" style="width: 19rem;">
+                        <img src="/images/card-12.webp" class="card-img-top img-fluid" alt="...">
+                        <div class="card-body mt-3">
+                            <p>amazon echo</p>
+
+                            <span class="text-primary fw-semibold">$250.00<span
+                                    class="text-decoration-line-through text-black fw-normal ms-3">$12.00</span></span>
+
+                            <div>
+                                <button type="button" class="btn btn-outline-warning mt-3">Add To Cart</button>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <!-- card 2 -->
+                    <div class="" style="width: 19rem;">
+                        <img src="/images/card-13.webp" class="card-img-top img-fluid" alt="...">
+                        <div class="card-body mt-3">
+                            <p>samsung gear 360</p>
+
+                            <span class="text-primary fw-semibold">$9.00<span
+                                    class="text-decoration-line-through text-black fw-normal ms-3">$12.00</span></span>
+
+                            <div>
+                                <button type="button" class="btn btn-outline-warning mt-3">Add To Cart</button>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <!-- card 3 -->
+                    <div class="d-none d-md-block" style="width: 19rem;">
+                        <img src="/images/card-14.webp" class="card-img-top img-fluid" alt="...">
+                        <div class="card-body mt-3">
+                            <p>samsung gear 360</p>
+
+                            <span class="text-primary fw-semibold">$9.00<span
+                                    class="text-decoration-line-through text-black fw-normal ms-3">$12.00</span></span>
+
+                            <div>
+                                <button type="button" class="btn btn-outline-warning mt-3">Add To Cart</button>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- card 4 -->
+                    <div class="d-none d-md-block" style="width: 19rem;">
+                        <img src="/images/card-7.avif" class="card-img-top img-fluid" alt="...">
+                        <div class="card-body mt-3">
+                            <p>samsung gear 360</p>
+
+                            <span class="text-primary fw-semibold">$9.00<span
+                                    class="text-decoration-line-through text-black fw-normal ms-3">$12.00</span></span>
+
+                            <div>
+                                <button type="button" class="btn btn-outline-warning mt-3">Add To Cart</button>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+                <!-- small screen cards -->
+                <div>
+                    <!-- card 7/8 -->
+
+                    <div class="d-flex gap-4">
+                        <div class="d-block d-md-none" style="width: 19rem;">
+                            <img src="/images/card-7.avif" class="card-img-top img-fluid" alt="...">
+                            <div class="card-body mt-3">
+                                <p>samsung gear 360</p>
+
+                                <span class="text-primary fw-semibold">$9.00<span
+                                        class="text-decoration-line-through text-black fw-normal ms-3">$12.00</span></span>
+
+                                <div>
+                                    <button type="button" class="btn btn-outline-warning mt-3">Add To Cart</button>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="d-block d-md-none" style="width: 19rem;">
+                            <img src="/images/card-14.webp" class="card-img-top img-fluid" alt="...">
+                            <div class="card-body mt-3">
+                                <p>samsung gear 360</p>
+
+                                <span class="text-primary fw-semibold">$9.00<span
+                                        class="text-decoration-line-through text-black fw-normal ms-3">$12.00</span></span>
+
+                                <div>
+                                    <button type="button" class="btn btn-outline-warning mt-3">Add To Cart</button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- card 9/10 -->
+                    <div class="d-flex gap-4">
+                        <div class="d-block d-md-none" style="width: 19rem;">
+                            <img src="/images/card-9.avif" class="card-img-top img-fluid" alt="...">
+                            <div class="card-body mt-3">
+                                <p>samsung gear 360</p>
+
+                                <span class="text-primary fw-semibold">$9.00<span
+                                        class="text-decoration-line-through text-black fw-normal ms-3">$12.00</span></span>
+
+                                <div>
+                                    <button type="button" class="btn btn-outline-warning mt-3">Add To Cart</button>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="d-block d-md-none" style="width: 19rem;">
+                            <img src="/images/card-10.jpg" class="card-img-top img-fluid" alt="...">
+                            <div class="card-body mt-3">
+                                <p>samsung gear 360</p>
+
+                                <span class="text-primary fw-semibold">$9.00<span
+                                        class="text-decoration-line-through text-black fw-normal ms-3">$12.00</span></span>
+
+                                <div>
+                                    <button type="button" class="btn btn-outline-warning mt-3">Add To Cart</button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- card 11/12 -->
+
+                    <div class="d-flex gap-4">
+                        <div class="d-block d-md-none" style="width: 19rem;">
+                            <img src="/images/card-11.webp" class="card-img-top img-fluid" alt="...">
+                            <div class="card-body mt-3">
+                                <p>samsung gear 360</p>
+
+                                <span class="text-primary fw-semibold">$9.00<span
+                                        class="text-decoration-line-through text-black fw-normal ms-3">$12.00</span></span>
+
+                                <div>
+                                    <button type="button" class="btn btn-outline-warning mt-3">Add To Cart</button>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="d-block d-md-none" style="width: 19rem;">
+                            <img src="/images/card-12.webp" class="card-img-top img-fluid" alt="...">
+                            <div class="card-body mt-3">
+                                <p>samsung gear 360</p>
+
+                                <span class="text-primary fw-semibold">$9.00<span
+                                        class="text-decoration-line-through text-black fw-normal ms-3">$12.00</span></span>
+
+                                <div>
+                                    <button type="button" class="btn btn-outline-warning mt-3">Add To Cart</button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <!-- pagination -->
+                <div class="mt-5 mb-5 pt-5 d-flex justify-content-end">
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination">
+
+                            <li class="page-item "><a class="page-link rounded-circle mx-1 text-black bg-warning"
+                                    href="#">1</a></li>
+                            <li class="page-item"><a class="page-link rounded-circle mx-1 text-black" href="#">2</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link rounded-circle mx-1 text-black" href="#" aria-label="Next">
+                                    <span aria-hidden="true"><iconify-icon class="pt-1"
+                                            icon="teenyicons:right-outline"></iconify-icon></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+
+            </div>
+
+        </div>
+
+        <!-- small screen accordion -->
+
+        <div class="d-block d-md-none mt-5 mx-3">
+
+
+            <div class="accordion-item">
+                <h2 class="accordion-header d-flex align-items-center" id="headingTwo">
+                    <button class="accordion-button collapsed pb-3 fs-3" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Product Categories
+                    </button>
+
+                    <iconify-icon class="me-3" icon="mingcute:down-line"></iconify-icon>
+
+                </h2>
+
+                <div class="progress mb-4" style="height: 2px;">
+                    <div class="progress-bar bg-warning" role="progressbar" aria-label="Warning example"
+                        style="width: 20%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+
+
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <div>
+
+                            <div class="accordion accordion-flush" id="accordionFlushExample">
+
+
+                                <div class="accordion-item border-0">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#flush-collapseOne"
+                                            aria-expanded="false" aria-controls="flush-collapseOne">
+                                            Computers
+                                        </button>
+                                    </h2>
+                                    <div id="flush-collapseOne" class="accordion-collapse collapse"
+                                        aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                        <div class="accordion-body">
+                                            <ul class="list-unstyled">
+                                                <li class="py-2">Workstation</li>
+                                                <li class="py-2">Laptop</li>
+                                                <li class="py-2">Desktop</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="accordion-item border-0">
+                                    <h2 class="accordion-header" id="flush-headingTwo">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo"
+                                            aria-expanded="false" aria-controls="flush-collapseTwo">
+                                            Television
+                                        </button>
+                                    </h2>
+                                    <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                                        aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                                        <div class="accordion-body">
+                                            <ul class="list-unstyled">
+                                                <li class="py-2">LCD Screen</li>
+                                                <li class="py-2">Plasma Screen</li>
+                                                <li class="py-2">Super Amoled</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="accordion-item border-0">
+                                    <h2 class="accordion-header" id="flush-headingThree">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#flush-collapseThree"
+                                            aria-expanded="false" aria-controls="flush-collapseThree">
+                                            Components
+                                        </button>
+                                    </h2>
+                                    <div id="flush-collapseThree" class="accordion-collapse collapse"
+                                        aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                                        <div class="accordion-body">
+                                            <ul class="list-unstyled">
+                                                <li class="py-2">Mice And Trackballs</li>
+                                                <li class="py-2">Monitors</li>
+                                                <li class="py-2">Printers</li>
+                                                <li class="py-2">Scanners</li>
+                                                <li class="py-2">Web Cameras</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <ul class="list-unstyled ms-3">
+                                <li class="py-2">Washing Machine</li>
+                                <li class="py-2">Speakers</li>
+                                <li class="py-2 ">Smart Watches</li>
+                                <li class="py-2">Cameras</li>
+                                <li class="py-2">Mobile Phone</li>
+                                <li class="py-2">Sneakers</li>
+                            </ul>
+
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="accordion-item">
+                <h2 class="accordion-header d-flex align-items-center" id="headingThree">
+                    <button class="accordion-button collapsed pb-3 fs-3" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Filter
+                    </button>
+
+                    <iconify-icon class="me-3" icon="mingcute:down-line"></iconify-icon>
+
+                </h2>
+
+                <div class="progress mb-4" style="height: 2px;">
+                    <div class="progress-bar bg-warning" role="progressbar" aria-label="Warning example"
+                        style="width: 20%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+
+
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+
+                        <div class="d-flex flex-wrap">
+                            <span class="bg-light py-2 px-2 m-1">Accessories</span>
+                            <span class="bg-light py-2 px-2 m-1">Back Light</span>
+                            <span class="bg-light py-2 px-2 m-1">Calendar</span>
+                            <span class="bg-light py-2 px-2 m-1">Caps</span>
+                            <span class="bg-light py-2 px-2 m-1">Clothes</span>
+                            <span class="bg-light py-2 px-2 m-1">Clothing</span>
+                            <span class="bg-light py-2 px-2 m-1">Cotton</span>
+                            <span class="bg-light py-2 px-2 m-1">Dual Time</span>
+                            <span class="bg-light py-2 px-2 m-1">Fashion</span>
+                            <span class="bg-light py-2 px-2 m-1">Hronograph</span>
+                            <span class="bg-light py-2 px-2 m-1">Multi Function</span>
+                            <span class="bg-light py-2 px-2 m-1">Shoes</span>
+                            <span class="bg-light py-2 px-2 m-1">Summer</span>
+                            <span class="bg-light py-2 px-2 m-1">Trends</span>
+                            <span class="bg-light py-2 px-2 m-1">Vintage</span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <img class="img-fluid my-3" src="/images/left-banner_large.webp" alt="">
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- footer -->
+
+    <div class="bg-dark border-bottom">
+        <div class="container d-none d-md-block">
+
+            <div class="row d-flex justify-content-between py-5">
+
+                <!-- link 1 -->
+                <div class="pe-5 col-md-3">
+                    <div class="sm-link">
+                        <h5 class="text-white">Get to Know Us</h5>
+
+                        <div class="progress mb-4" style="height: 2px;">
+                            <div class="progress-bar bg-warning" role="progressbar" aria-label="Warning example"
+                                style="width: 20%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+
+
+                    <ul class="footer-ul list-unstyled">
+                        <li class="my-2 font-size"><a class="text-decoration-none text-white-50" href="#"> <iconify-icon
+                                    class="cursor" icon="icon-park-outline:right"></iconify-icon> About Us</a></li>
+                        <li class="my-2 font-size"><a class="text-decoration-none text-white-50" href="#"><iconify-icon
+                                    class="cursor" icon="icon-park-outline:right"></iconify-icon> Delivery
+                                Information</a></li>
+                        <li class="my-2 font-size"><a class="text-decoration-none text-white-50" href="#"><iconify-icon
+                                    class="cursor" icon="icon-park-outline:right"></iconify-icon> Privacy Policy</a>
+                        </li>
+                        <li class="my-2 font-size"><a class="text-decoration-none text-white-50" href="#"><iconify-icon
+                                    class="cursor" icon="icon-park-outline:right"></iconify-icon> Terms &
+                                Conditions</a></li>
+                        <li class="my-2 font-size"><a class="text-decoration-none text-white-50" href="#"><iconify-icon
+                                    class="cursor" icon="icon-park-outline:right"></iconify-icon> Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- link 2 -->
+                <div class="pe-5 col-md-3">
+                    <div class="sm-link">
+                        <h5 class="text-white">Connect With US</h5>
+
+                        <div class="progress mb-4" style="height: 2px;">
+                            <div class="progress-bar bg-warning" role="progressbar" aria-label="Warning example"
+                                style="width: 20%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+
+
+                    <ul class="list-unstyled footer-ul">
+                        <li class="my-2 font-size"><a class="text-decoration-none text-white-50" href="#"><iconify-icon
+                                    class="cursor" icon="icon-park-outline:right"></iconify-icon> Facebook</a></li>
+                        <li class="my-2 font-size"><a class="text-decoration-none text-white-50" href="#"><iconify-icon
+                                    class="cursor" icon="icon-park-outline:right"></iconify-icon> Twitter</a></li>
+                        <li class="my-2 font-size"><a class="text-decoration-none text-white-50" href="#"><iconify-icon
+                                    class="cursor" icon="icon-park-outline:right"></iconify-icon> Instagram</a>
+                        </li>
+                        <li class="my-2 font-size"><a class="text-decoration-none text-white-50" href="#"><iconify-icon
+                                    class="cursor" icon="icon-park-outline:right"></iconify-icon> Youtube</a></li>
+                        <li class="my-2 font-size"><a class="text-decoration-none text-white-50" href="#"><iconify-icon
+                                    class="cursor" icon="icon-park-outline:right"></iconify-icon> Linkdin</a></li>
+                    </ul>
+                </div>
+
+                <!-- link 3 -->
+
+                <div class="pe-5 col-md-3">
+                    <div class="sm-link">
+                        <h5 class="text-white">Let Us Help You</h5>
+
+                        <div class="progress mb-4" style="height: 2px;">
+                            <div class="progress-bar bg-warning" role="progressbar" aria-label="Warning example"
+                                style="width: 20%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+
+
+                    <ul class="list-unstyled footer-ul">
+                        <li class="my-2 font-size"><a class="text-decoration-none text-white-50" href="#"><iconify-icon
+                                    class="cursor" icon="icon-park-outline:right"></iconify-icon> Your Account</a>
+                        </li>
+                        <li class="my-2 font-size"><a class="text-decoration-none text-white-50" href="#"><iconify-icon
+                                    class="cursor" icon="icon-park-outline:right"></iconify-icon> Returns
+                                Centre</a></li>
+                        <li class="my-2 font-size"><a class="text-decoration-none text-white-50" href="#"><iconify-icon
+                                    class="cursor" icon="icon-park-outline:right"></iconify-icon> Cartbit App
+                                Download</a></li>
+                        <li class="my-2 font-size"><a class="text-decoration-none text-white-50" href="#"><iconify-icon
+                                    class="cursor" icon="icon-park-outline:right"></iconify-icon> Help</a></li>
+                    </ul>
+                </div>
+
+                <!-- link 4 -->
+                <div class="pe-5 col-md-3">
+                    <div class="sm-link">
+                        <h5 class="text-white">Get to Know Us</h5>
+
+                        <div class="progress mb-4" style="height: 2px;">
+                            <div class="progress-bar bg-warning" role="progressbar" aria-label="Warning example"
+                                style="width: 20%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+
+
+                    <div class="footer-ul">
+                        <div>
+                            <img src="/images/google-play.avif" alt="">
+                        </div>
+                        <div class="mt-3">
+                            <img src="/images/app-store.avif" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </div>
+
+        <!-- small screen ffooter -->
+
+        <div class="py-4 d-block d-md-none">
+            <!-- footer link 1 -->
+
+            <div class="pt-3">
+                <div class="accordion-item">
+                    <div class="d-flex align-items-center justify-content-between py-1">
+                        <h2 class="accordion-header" id="flush-headingOne">
+                            <button class="accordion-button collapsed text-white fs-3 ms-3 py-2" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                aria-controls="flush-collapseOne">
+                                Get to Know Us
+                            </button>
+
+                        </h2>
+                        <iconify-icon class="bg-white rounded-circle p-2 fs-5 me-3"
+                            icon="iconoir:nav-arrow-down"></iconify-icon>
+                    </div>
+
+
+                    <div class="progress mb-4 mx-3" style="height: 2px;">
+                        <div class="progress-bar bg-warning" role="progressbar" aria-label="Warning example"
+                            style="width: 20%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+
+
+                    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+
+                            <ul class=" list-unstyled px-3">
+                                <li class="my-2 fs-6"><a class="text-decoration-none text-white-50" href="#">
+                                        <iconify-icon class="cursor" icon="icon-park-outline:right"></iconify-icon>
+                                        About
+                                        Us</a></li>
+                                <li class="my-2 fs-6"><a class="text-decoration-none text-white-50"
+                                        href="#"><iconify-icon class="cursor"
+                                            icon="icon-park-outline:right"></iconify-icon>
+                                        Delivery
+                                        Information</a></li>
+                                <li class="my-2 fs-6"><a class="text-decoration-none text-white-50"
+                                        href="#"><iconify-icon class="cursor"
+                                            icon="icon-park-outline:right"></iconify-icon>
+                                        Privacy Policy</a>
+                                </li>
+                                <li class="my-2 fs-6"><a class="text-decoration-none text-white-50"
+                                        href="#"><iconify-icon class="cursor"
+                                            icon="icon-park-outline:right"></iconify-icon>
+                                        Terms &
+                                        Conditions</a></li>
+                                <li class="my-2 fs-6"><a class="text-decoration-none text-white-50"
+                                        href="#"><iconify-icon class="cursor"
+                                            icon="icon-park-outline:right"></iconify-icon>
+                                        Contact Us</a>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- footer link 2 -->
+
+            <div class="pt-3">
+                <div class="accordion-item">
+                    <div class="d-flex align-items-center justify-content-between py-1">
+                        <h2 class="accordion-header" id="flush-headingTwo">
+                            <button class="accordion-button collapsed text-white fs-3 ms-3 py-2" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                                aria-controls="flush-collapseTwo">
+                                Connect With US
+                            </button>
+                        </h2>
+
+                        <iconify-icon class="bg-white rounded-circle p-2 fs-5 me-3"
+                            icon="iconoir:nav-arrow-down"></iconify-icon>
+                    </div>
+
+
+                    <div class="progress mb-4 mx-3" style="height: 2px;">
+                        <div class="progress-bar bg-warning" role="progressbar" aria-label="Warning example"
+                            style="width: 20%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+
+                    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+
+                            <ul class="list-unstyled px-3">
+                                <li class="my-2 fs-6"><a class="text-decoration-none text-white-50"
+                                        href="#"><iconify-icon class="cursor"
+                                            icon="icon-park-outline:right"></iconify-icon>
+                                        Facebook</a></li>
+                                <li class="my-2 fs-6"><a class="text-decoration-none text-white-50"
+                                        href="#"><iconify-icon class="cursor"
+                                            icon="icon-park-outline:right"></iconify-icon>
+                                        Twitter</a></li>
+                                <li class="my-2 fs-6"><a class="text-decoration-none text-white-50"
+                                        href="#"><iconify-icon class="cursor"
+                                            icon="icon-park-outline:right"></iconify-icon>
+                                        Instagram</a>
+                                </li>
+                                <li class="my-2 fs-6"><a class="text-decoration-none text-white-50"
+                                        href="#"><iconify-icon class="cursor"
+                                            icon="icon-park-outline:right"></iconify-icon>
+                                        Youtube</a></li>
+                                <li class="my-2 fs-6"><a class="text-decoration-none text-white-50"
+                                        href="#"><iconify-icon class="cursor"
+                                            icon="icon-park-outline:right"></iconify-icon>
+                                        Linkdin</a></li>
+                            </ul>
+
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- footer link 3 -->
+
+            <div class="pt-3">
+
+                <div class="accordion-item">
+                    <div class="d-flex align-items-center justify-content-between py-1">
+                        <h2 class="accordion-header" id="flush-headingThree">
+                            <button class="accordion-button collapsed text-white fs-3 ms-3 py-2" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false"
+                                aria-controls="flush-collapseThree">
+                                Let Us Help You
+                            </button>
+                        </h2>
+
+                        <iconify-icon class="bg-white rounded-circle p-2 fs-5 me-3"
+                            icon="iconoir:nav-arrow-down"></iconify-icon>
+                    </div>
+
+
+                    <div class="progress mb-4 mx-3" style="height: 2px;">
+                        <div class="progress-bar bg-warning" role="progressbar" aria-label="Warning example"
+                            style="width: 20%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+
+
+                    <div id="flush-collapseThree" class="accordion-collapse collapse"
+                        aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+
+                            <ul class="list-unstyled px-3">
+                                <li class="my-2 fs-6"><a class="text-decoration-none text-white-50"
+                                        href="#"><iconify-icon class="cursor"
+                                            icon="icon-park-outline:right"></iconify-icon> Your Account</a>
+                                </li>
+                                <li class="my-2 fs-6"><a class="text-decoration-none text-white-50"
+                                        href="#"><iconify-icon class="cursor"
+                                            icon="icon-park-outline:right"></iconify-icon> Returns
+                                        Centre</a></li>
+                                <li class="my-2 fs-6"><a class="text-decoration-none text-white-50"
+                                        href="#"><iconify-icon class="cursor"
+                                            icon="icon-park-outline:right"></iconify-icon> Cartbit App
+                                        Download</a></li>
+                                <li class="my-2 fs-6"><a class="text-decoration-none text-white-50"
+                                        href="#"><iconify-icon class="cursor"
+                                            icon="icon-park-outline:right"></iconify-icon> Help</a></li>
+                            </ul>
+
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- footer link 4 -->
+
+            <div class="pt-3">
+                <div class="accordion-item">
+                    <div class="d-flex align-items-center justify-content-between py-1">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed text-white fs-3 ms-3 py-2" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                Download Apps
+                            </button>
+                        </h2>
+
+                        <iconify-icon class="bg-white rounded-circle p-2 fs-5 me-3"
+                        icon="iconoir:nav-arrow-down"></iconify-icon>
+                    </div>
+                    <div class="progress mb-4 mx-3" style="height: 2px;">
+                        <div class="progress-bar bg-warning" role="progressbar" aria-label="Warning example"
+                            style="width: 20%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+
+
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+
+                            <div class="px-3">
+                                <div>
+                                    <img src="/images/google-play.avif" alt="">
+                                </div>
+                                <div class="mt-3">
+                                    <img src="/images/app-store.avif" alt="">
+                                </div>
+                            </div>
+    
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+        <!-- footer three -->
+
+        <div>
+            <div class="container">
+                <footer class="d-flex flex-wrap align-items-center pb-4">
+                    <span class="mb-0 text-white fw-bold fs-5">Product Tag :</span>
+
+
+
+                    <ul class="nav justify-content-start">
+                        <li class="nav-item fs-6 footer-ul-size"><a href="#"
+                                class="nav-link px-1 ms-2 text-white-50">Accessories
+                                <span class="ms-2 text-white-50">/</span></a></li>
+                        <li class="nav-item fs-6 footer-ul-size"><a href="#" class="nav-link px-1 text-white-50">Back
+                                light <span class="ms-2 text-white-50">/</span></a></li>
+                        <li class="nav-item fs-6 footer-ul-size"><a href="#" class="nav-link px-1 text-white-50">Clothes
+                                <span class="ms-2 text-white-50">/</span></a>
+                        </li>
+                        <li class="nav-item fs-6 footer-ul-size"><a href="#" class="nav-link px-1 text-white-50">
+                                Fashion <span class="ms-2 text-white-50">/</span></a>
+                        </li>
+                        <li class="nav-item fs-6 footer-ul-size"><a href="#" class="nav-link px-1 text-white-50">
+                                Shoes</a>
+                        </li>
+                    </ul>
+                </footer>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- last footer -->
+
+    <div class="bg-dark">
+        <div class="container">
+            <footer class="d-flex flex-wrap justify-content-between align-items-center py-4">
+                <p class="col-12 col-md-4 mb-0 text-white-50 fw-light last-footer">&copy; 2024, KartPul Demo Powered by
+                    Shopify</p>
+
+
+
+                <div class="d-flex col-12 col-md-4 footer-dropdown">
+
+                    <div class="dropdown mx-1">
+                        <button class="btn btn-light text-black-50 dropdown-toggle" type="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            English
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item text-black-50 font-size py-2" href="#">English</a></li>
+                            <li><a class="dropdown-item text-black-50 font-size py-2" href="#">Deutsch</a></li>
+                            <li><a class="dropdown-item text-black-50 font-size py-2" href="#">Espanol</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="dropdown mx-1">
+                        <button class="btn btn-light text-black-50 dropdown-toggle" type="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            USD $
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item text-black-50 font-size py-2" href="#">EUR €</a></li>
+                            <li><a class="dropdown-item text-black-50 font-size py-2" href="#">INR ₹</a></li>
+                            <li><a class="dropdown-item text-black-50 font-size py-2" href="#">USD $</a></li>
+                        </ul>
+                    </div>
+
+
+                </div>
+
+
+                <ul class="nav col-12 col-md-4 align-items-center list-unstyled d-flex footer-icon-catalog">
+
+
+                    <li class="mx-1"><a class="text-muted bg-light p-2 rounded-1 " href="#"><iconify-icon
+                                icon="logos:visa"></iconify-icon></a></li>
+
+
+                    <li class="ms-1"><a class="text-muted bg-light py-2 px-3 rounded-1" href="#"><iconify-icon
+                                icon="logos:mastercard"></iconify-icon></a></li>
+
+
+                    <li><a class="text-muted" href="#"><img class="img-fluid footer-img-w"
+                                src="/images/amex.png" alt=""></a></li>
+
+
+                    <li class="me-1"><a class="text-muted bg-light py-2 px-3 rounded-1" href="#"><iconify-icon
+                                icon="logos:paypal"></iconify-icon></a></li>
+
+
+                    <li class="ms-1"><a class="text-primary" href="#"><img class="img-fluid diner-club"
+                                src="/images/diners-club.png" alt=""></a></li>
+
+
+                    <li><a class="text-primary" href="#"><img class="img-fluid discover" src="/images/discover.png"
+                                alt=""></a></li>
+
+
+                </ul>
+            </footer>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
